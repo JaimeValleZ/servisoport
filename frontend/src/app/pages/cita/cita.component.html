@@ -1,0 +1,23 @@
+<div class="container mt-4">
+    <h2>Agendar Cita</h2>
+    <form (ngSubmit)="guardarCita()" #citaForm="ngForm">
+  
+      <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha</label>
+        <input type="date" id="fecha" class="form-control" name="fecha" [(ngModel)]="cita.fecha" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="motivoDeCita" class="form-label">Motivo de la Cita</label>
+        <input type="text" id="motivoDeCita" class="form-control" name="motivoDeCita" [(ngModel)]="cita.motivoDeCita" required>
+      </div>
+  
+      <div class="mb-3">
+        <label for="especializacion" class="form-label">Especialización</label>
+        <input type="text" id="especializacion" class="form-control" name="especializacion" [(ngModel)]="cita.especializacion" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Agendar Cita</button>
+    </form>
+  </div>
+  
